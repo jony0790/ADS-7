@@ -3,13 +3,17 @@
 #include "train.h"
 
 int main() {
-  Train train;
-  int count = 60; // кол-во вагонов
+    Train train;
 
-  while (count--)
+    train.addCar(true);
+    train.addCar(false);
+    train.addCar(true);
     train.addCar(false);
 
-  std::cout << train.getLength() << std::endl;
-  std::cout << train.getOpCount() << std::endl;
-  return 0;
+    int length = train.getLength();
+
+    std::cout << "Train length: " << length << std::endl;
+    std::cout << "Operations: " << train.getOpCount() << std::endl;
+
+    return 0;
 }
